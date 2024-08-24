@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
                            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
                            crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Deepak Rathor</title>
     <link rel="website icon" type="jpg" href="img/resuu1.jpg">
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using Html,css,javascript" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Deepak Rathor | Portfolio</title>
+    <meta name="description" content="Self Developed personal website build with Html,css,javascript">
 
     <link rel="stylesheet" href="estilo.css">
 
 </head>
 <body>
+
+    <div id="preloader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <div class="loader-text">Loading...</div>
+    </div>
     <!-- MENU -->
     <div class="contenedor-header">
         <header>
@@ -20,10 +36,10 @@
             </div> -->
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">INFO</a></li>
+                    <li><a href="#info" onclick="seleccionar()">INFO</a></li>
                     <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#projects" onclick="seleccionar()">PROJECTS</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
                 </ul>
             </nav>
@@ -37,10 +53,18 @@
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
             <div class="contenedor-img">
-                <img src="img/resuu.jpg" alt="">
+                <div class="tilt-container">
+                    <div class="tilt">
+                        <img src="img/resuu.jpg" alt="image" class="img-fluid">
+                    </div>
+                </div>
             </div>
-            <h1>Deepak &nbsp;Rathor</h1>
-            <h2>Software Engineer</h2>
+            <div class="header-container">
+             
+                <h1>Deepak&nbsp;Rathor</h1>
+                <div class="typewriter-text" id="typewriter-text"></div>
+              </div>
+            
             <div class="redes">
                 <a href="https://www.facebook.com/profile.php?id=100053611511434&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://twitter.com/DeepakR52107981?t=7noyMCk9GTWSa5itSFPm6w&s=08" target="_blank"><i class="fa-brands fa-twitter"></i></a>
@@ -52,11 +76,11 @@
     </section>
 
     <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi">
+    <section id="info" class="sobremi" >
         <div class="contenido-seccion">
             <h2>Info</h2>
             <br>
-            <p> 🚀 Passionate MERN Stack Developer | Crafting Seamless Web Experiences .</p>
+            <p> 🚀 Passionate Full Stack Developer (MERN Stack) | Crafting Seamless Web Experiences .</p>
             <br>
             <p>Hello ! ッ<br><span>I am Deepak Rathor .</span></p>
             <br>
@@ -94,7 +118,7 @@
                         
                         <li>
                             <strong><i class="fas fa-location"></i></i>&nbsp;&nbsp;Location -- &nbsp; </strong>
-                            Indore , Madhya Pradesh , INDIA (452001)
+                            Indore , Madhya Pradesh , INDIA
                         </li>
                        
                         <li>
@@ -145,7 +169,7 @@
                 </div>
             </div>
            
-            <a href="./Deepak Rathor Resume.pdf" target="_blank" style="text-decoration: none;"> <button>
+            <a href="./Deepak.pdf" target="_blank" style="text-decoration: none;"> <button>
                 Download CV &nbsp;<i class="fa-solid fa-download"></i>
                 <span class="overlay"></span>
             </button></a>
@@ -186,21 +210,24 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Java</span>
+                        <span>Node JS</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>70%</span>
                             </div>
                         </div>
+
                     </div>
+                    
                     <div class="skill">
-                        <span>VS Code</span>
+                        <span>Java</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>80%</span>
                             </div>
                         </div>
                     </div>
+                
                 </div>
                 <!-- Professional Skills -->
                 <div class="col">
@@ -262,7 +289,7 @@
                         <h4>Masters</h4>
                         <span class="casa">RGPV University , Bhopal , MP  </span>
                         <span class="fecha">2022 - 2024</span>
-                        <p>At present I'm persuing Masters in Computer Application ( MCA ) from IPS Academy , Indore , Madhya Pradesh , which is affiliated to RGPV University . </p>
+                        <p>I Completed my Master of Computer Applications (MCA) from IPS Academy, Indore, Madhya Pradesh, affiliated with RGPV University, achieving a CGPA of 7.94. </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
@@ -303,21 +330,22 @@
                     <h3>&nbsp; Experience & Certificates</h3>
 
                     <div class="item der">
-                        <h4>INTERNSHIP</h4>
-                        <span class="casa">Byte Billion , INDORE , MP</span>
-                        <span class="fecha">January 2023 - July 2023</span>
-                        <p>I'm doing internship at <br> ByteBillion Technical Private Limited.</p>
+                        <h4>Full Stack Intern</h4>
+                        <span class="casa">Sparkup Technology Private Limited, Indore, Madhya Pradesh</span>
+                        <span class="fecha">July 2024 - Present
+                        </span>
+                        <p>I'm doing internship at <br>Sparkup Technology Private Limited.</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
 
                     <div class="item der">
-                        <h4>MERN STACK DEVELOPER</h4>
-                        <span class="casa">Byte Billion, INDORE</span>
-                        <span class="fecha">January - July 2023</span>
+                        <h4>MERN STACK DEVELOPER Intern</h4>
+                        <span class="casa">Byte Billion Pvt. Ltd., INDORE</span>
+                        <span class="fecha">September 2023 - March 2024</span>
                         <br>
-                        <p>I had done certified cource of MERN Stack Developer . </p>
+                        <p>I completed an internship as a MERN Stack Developer.</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
@@ -327,7 +355,7 @@
                         <h4>SQL (Basic) </h4>
                         <span class="casa">HackerRank</span>
                         <span class="fecha">20 Aug 2023</span>
-                        <p>I had done certified of SQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Basic) .</p>
+                        <p>I had done certified of SQL (Basic)</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
@@ -337,7 +365,7 @@
                         <h4>HTML / CSS</h4>
                         <span class="casa">OpenWeaver</span>
                         <span class="fecha">19 Apr 2023</span>
-                        <p>Has successfully completed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Basics of HTML / CSS ' Training  .</p>
+                        <p>Has successfully completed basics of HTML / CSS  Training  .</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
@@ -348,59 +376,32 @@
         </div>
     </section>
 
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-        <div class="contenido-seccion">
-            <h2>Portfolio</h2>
-            <div class="galeria">
-                <div class="proyecto">
-                    <img src="img/react.jpg" alt="">
-                    <div class="overlay">
-                        <h3>React JS</h3>
-                        <p>{ Good in making UI COMPONENTS. }</p>
-                    </div>
-                </div>
 
-                <div class="proyecto">
-                    <img src="./img/cl.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Cloud Computing</h3>
-                        <p> Expert in Cloud Computing</p>
-                    </div>
-                </div>
-
-                <div class="proyecto">
-                    <img src="img/lead2.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Teamwork</h3>
-                        <p>(Capability to lead the team.)</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/cricket.jpg" alt="">
-                    <div class="overlay">
-                        <h3>CRICKET</h3>
-                        <p>I love to play cricket .</p>
-                    </div>
-                </div>
-             
-                <div class="proyecto">
-                    <img src="img/mm.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Music</h3>
-                        <p>"Music is life"</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/travel.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Travel</h3>
-                        <p><< Live To Travel >> </p>
-                    </div>
-                </div>
+      <!-- SECCION PROJECT -->
+    <section class="project" id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+          <h1 class="project-heading">
+            
+            My Recent <strong class="purple">Works</strong>
+          </h1>
+          <p class="description">Here are a few projects I've worked on recently.</p>
+          <div class="project-cards">
+            
+            <!-- Project Card 1 -->
+            <div class="project-card">
+              <img src="path/to/chatify.png" alt="Chatify" class="project-image">
+              <h2 class="project-title">Chatify</h2>
+              <p class="project-description">Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase...</p>
+              <a href="https://github.com/soumyajit4419/Chatify" class="btn">GitHub</a>
+              <a href="https://chatify-49.web.app/" class="btn">Demo</a>
             </div>
+    
+            <!-- Add more project cards similarly -->
+    
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- SECCION CONTACTO -->
     <section id="contacto" class="contacto">
@@ -410,7 +411,7 @@
                 <!-- Formulario -->
                 <div class="col">
 
-                    <form action="mailto:soumyatiwari7247@gmail.com" method="post" enctype="text/plain">
+                    <form action="mailto:deepakrathor3221@gmail.com" method="post" enctype="text/plain">
 
                     <input id="name" type="text" placeholder="Enter your name" required>
                     <input id="email" type="email" placeholder="Enter your e-mail" required>

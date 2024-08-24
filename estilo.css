@@ -11,6 +11,60 @@ html{
     scroll-behavior: smooth;
 }
 
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #131a1ab0; /* Background color matching your theme */
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    animation-delay: -1.0s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(0.0); }
+    50% { transform: scale(1.0); }
+}
+
+.loader-text {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    animation: fade-in 3s infinite;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
 /* MENU */
 
 .contenedor-header{
@@ -35,7 +89,7 @@ html{
 .contenedor-header header .logo img {
     
     position: absolute;
-    height: 65px;
+    height: 60px;
     width: 100px;
     border-radius: 50%;
     
@@ -46,7 +100,7 @@ html{
     font-size: 17px;
 }
 .contenedor-header header nav ul li a{
-    text-align: none;
+    text-align: center;
     font-family: 'segoe script';
     color: #fff;
     margin: 0 15px;
@@ -54,10 +108,24 @@ html{
     transition: .3s;
     text-decoration: none;
     font-size: 17 px;
+  
 }
 .contenedor-header header nav ul li a:hover{
     color: yellow;
 }
+.header-container {
+    text-align: center;
+  }
+  
+  .typewriter-text {
+    margin-top: 2px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    height: 30px; /* Adjust to your needs */
+  }
 .nav-responsive{
     background-color: rgb(84, 2, 183);
     color:#fff;
@@ -77,8 +145,8 @@ html{
     align-items: center;
 }
 .inicio .contenido-banner{
-    padding: 1px;
-    padding-top: 55px;
+    padding: 50px;
+ 
     /* background: linear-gradient(to top, rgba(73, 78, 80, 0.8), rgb(19, 20, 22)), */
     /* background : url(img/back_profile.png); */
     /* background-color: #173347; */
@@ -89,11 +157,13 @@ html{
 }
 
 .inicio .contenido-banner img:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     transition: 0.6s ease;
-  }
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+}
 
 
 
@@ -130,6 +200,7 @@ html{
     margin: 25px 6px;
     font-size: 23px;
     transition: .3s;
+    margin-top: 10px;
 }
 .inicio .contenido-banner .redes a:hover{
     background-color:rgb(59, 53, 238);
@@ -276,6 +347,7 @@ html{
     padding: 0 20px;
 }
 .skills .fila .col h3{
+    
     font-size: 38px;
     font-family: 'Script MT bold';
     margin-bottom: 25px;
@@ -327,47 +399,52 @@ html{
 
 
 /* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
+.skills .skill .htmlcss{
     width: 0%;
-    animation: 2s javascript forwards;
+    animation: 2s html forwards;
+    -webkit-animation: 2s htmlcss forwards;
 }
-@keyframes javascript {
+@keyframes htmlcss {
     0%{width: 0%;}
     100%{width: 95%;}
 }
 
-.skills .skill .htmlcss{
+.skills .skill .JavaScript{
     width: 0%;
-    animation: 2s htmlcss forwards;
+    animation: 2s JavaScript forwards;
+    -webkit-animation: 2s JavaScript forwards;
 }
-@keyframes htmlcss {
+@keyframes JavaScript {
     0%{width: 0%;}
     100%{width: 87%;}
 }
 
-.skills .skill .photoshop{
+.skills .skill .react{
     width: 0%;
-    animation: 2s photoshop forwards;
+    animation: 2s react forwards;
+    -webkit-animation: 2s react forwards;
 }
-@keyframes photoshop {
+@keyframes react {
     0%{width: 0%;}
     100%{width: 80%;}
 }
 
-.skills .skill .wordpress{
+.skills .skill .node{
     width: 0%;
-    animation: 2s wordpress forwards;
+    animation: 2s node forwards;
+    -webkit-animation: 2s node forwards;
 }
-@keyframes wordpress {
+@keyframes node {
     0%{width: 0%;}
-    100%{width: 70%;}
+    100%{width: 75%;}
 }
 
-.skills .skill .drupal{
+.skills .skill .java{
     width: 0%;
-    animation: 2s drupal forwards;
+    animation: 2s java forwards;
+    -webkit-animation: 2s java forwards;
 }
-@keyframes drupal {
+@keyframes java {
     0%{width: 0%;}
     100%{width: 80%;}
 }
@@ -404,6 +481,19 @@ html{
     animation: 2s dedicacion forwards;
 }
 @keyframes dedicacion {
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .proyect{
+    width: 0%;
+    animation: 2s proyect forwards;
+}
+.skills .skill .Nodejs{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes Nodejs {
     0%{width: 0%;}
     100%{width: 80%;}
 }
@@ -465,6 +555,7 @@ html{
     border-left: 2px solid  #e6d964;
 }
 .curriculum .fila .item{
+    letter-spacing: 1px;
     padding: 25px;
     margin-bottom: 30px;
     background-color: #252A2E;
@@ -472,6 +563,7 @@ html{
 }
 .curriculum .fila .item h4{
     font-size: 23px;
+    letter-spacing: 1px;
     margin-bottom: 10px;
     color: #e6d964;
 }
@@ -481,15 +573,40 @@ html{
     font-weight: bold;
     display: block;
 }
+/* Basic styling for the container and image */
+.tilt-container {
+    perspective: 1000px; /* Adjusts the 3D perspective */
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.tilt {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+    width: 100%;
+    height: 100%;
+}
+
+.tilt:hover {
+    transform: rotateY(10deg) rotateX(10deg); /* Slight tilt effect on hover */
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .curriculum .fila .item .fecha{
     display: block;
     color: #c1badf;
-    margin-bottom: 10px;
     font-size: 20px;
+    margin-top: 5px;
 }
 .curriculum .fila .item p{
     line-height: 24px;
     font-size: 18px;
+    margin-top: 0.5rem;
 }
 .curriculum .fila .izq{
     border-right: 2px solid  #e6d964;;
@@ -498,6 +615,7 @@ html{
 .curriculum .fila .der{
     border-left: 2px solid  #e6d964;;
     margin-left: 20px;
+ 
 }
 .curriculum .fila .item .conectori{
     height: 2px;
@@ -508,6 +626,7 @@ html{
     right: -47px;
     z-index: 5;
 }
+
 .curriculum .fila .item .conectori .circuloi{
     display: block;
     height: 10px;
@@ -537,64 +656,7 @@ html{
     position: relative;
     bottom: 4px;
 }
-/* SECCION PORTFOLIO */
-.portfolio{
-    background-color: #252A2E;
-    color: #fff;
-    padding: 50px 20px;
-}
-.portfolio .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.portfolio h2{
-    font-size: 70px;
-    font-family: 'gabriola';
-    text-align: center;
-    padding: 20px 0;
-}
-.portfolio .galeria{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    color: rgb(15, 15, 58);
-}
-.portfolio .galeria .proyecto{
-    position: relative;
-    max-width: 340px;
-    height: fit-content;
-    margin: 9px;
-    cursor: pointer;
-}
-.portfolio .galeria .proyecto img{
-    width: 100%;
-    display: block;
-}
-.portfolio .galeria .proyecto .overlay{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: linear-gradient(rgba(30, 209, 173, 0.8), rgba(30, 209, 173, 0.8));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-    font-size: 18px;
-    letter-spacing: 3px;
-    opacity: 0;
-}
-.portfolio .galeria .proyecto .overlay h3{
-    margin-bottom: 20px;
-    transition: 1s;
-}
-.portfolio .galeria .proyecto .overlay:hover{
-    opacity: 1;
-}
-.portfolio .galeria .proyecto .overlay:hover h3{
-    margin-bottom: 0px;
-}
+
 /* SECCION CONTACTO */
 .contacto{
     background-image: url(img/w2.jpg);
@@ -747,7 +809,98 @@ footer .arriba :hover{
     font-size: 30px ;
     transition: 0.2s;
 }
+/* Project Section */
 
+.project{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.project .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.project h2{
+    font-size: 70px;
+    font-family: 'gabriola';
+    text-align: center;
+    padding: 20px 0;
+}
+.project-section {
+    padding: 150px 0 30px;
+    background: linear-gradient(135deg,  rgb(238, 238, 61) 0%, rgb(238, 238, 61) 100%);
+  }
+  
+  .project-heading {
+    font-size: 2.3em;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .purple {
+    color:  rgb(238, 238, 61);
+  }
+  
+  .description {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  /* Project Cards */
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561);
+  }
+  
+  .project-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .project-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 1em;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: black;
+    background-color:  rgb(238, 238, 61);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: rgb(219, 219, 25);
+  }
 
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
@@ -803,16 +956,6 @@ footer .arriba :hover{
         margin-left: 20px;
     }
 
-    .portfolio .galeria{
-        display: block;
-        width: 100%;
-    }
-    .portfolio .galeria .proyecto{
-        max-width: 100%;
-    }
-    .portfolio .galeria .proyecto img{
-        width: 100%;
-    }
     .contacto .fila{
         display: block;
     }
