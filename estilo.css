@@ -89,6 +89,8 @@ html{
 
 }
 .contenedor-header header .logo p {
+    position: absolute;
+    z-index: 2;
   color: #e6d964;
   text-align: center;
   font-family: 'segoe script';
@@ -921,6 +923,10 @@ footer .arriba :hover{
     nav{
         display: none;
         transition: left 0.3s ease-in-out; /* Smooth transition */
+    }
+    .contenedor-header header .logo p{
+        margin-top: -15px;
+      margin-left: -5px;
     }
     .nav-responsive{
         display: block;
