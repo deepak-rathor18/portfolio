@@ -144,26 +144,40 @@ tilt.addEventListener('mouseleave', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const projects = [
       {
-        title: "Chatify",
-        imgPath: "path/to/chatify.png",
-        description: "Personal Chat Room or Workspace...",
-        ghLink: "https://github.com/soumyajit4419/Chatify",
-        demoLink: "https://chatify-49.web.app/"
+        title: "Admin Dashboard",
+        imgPath: "./img//sparkup.png",
+        description: " The admin dashboard project allows full management of website content, including dynamic updates and role-based access control for various user permissions.....",
+        ghLink: "#projects",
+        demoLink: "https://sparkuptech.in/#/"
+      },
+      {
+        title: "Study Notion",
+        imgPath: "./img//studynotion.png",
+        description: "Developed the Study Notion e-learning platform using ReactJS, NodeJS, and MongoDB, enabling students to access courses and instructors to manage content and track performance, with enhanced UI using Tailwind CSS...",
+        ghLink: "https://github.com/deepak-rathor18/studynotion",
+        demoLink: "#projects"
+      },
+      {
+        title: "Criclive (Cricket Live Score Website)",
+        imgPath: "./img//cricklive.png",
+        description: "Created Criclive, a real-time cricket score website using ReactJS and API integration, delivering up-to-the-minute match updates and scores with efficient state management...",
+        ghLink: "https://github.com/deepak-rathor18/liveScore",
+        demoLink: "https://cricket-live-score-ten.vercel.app/"
       },
       // Add more project objects here...
     ];
   
     const projectContainer = document.querySelector('.project-cards');
-  
+ 
     projects.forEach(project => {
       const projectCard = document.createElement('div');
       projectCard.classList.add('project-card');
       projectCard.innerHTML = `
-        <img src="${project.imgPath}" alt="${project.title}" class="project-image">
+        <img src="${project.imgPath}" alt="${project.title}" class="project-image" >
         <h2 class="project-title">${project.title}</h2>
         <p class="project-description">${project.description}</p>
-        <a href="${project.ghLink}" class="btn">GitHub</a>
-        <a href="${project.demoLink}" class="btn">Demo</a>
+        <a href="${project.ghLink}" class="btn" target="_blank">GitHub</a>
+        <a href="${project.demoLink}" class="btn" target="_blank">Demo</a>
       `;
       projectContainer.appendChild(projectCard);
     });

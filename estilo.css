@@ -65,6 +65,32 @@ html{
 }
 
 
+/* --------- */
+/*Scrollbar   */
+/* --------- */
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(235, 235, 7);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(182, 97, 194, 0.911);
+    border-radius: 12px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(202, 6, 228);
+    border-radius: 12px;
+  }
+  
+
 /* MENU */
 
 .contenedor-header{
@@ -99,6 +125,7 @@ html{
   transition: .3s;
   text-decoration: none;
   font-size: 20px;
+  margin-top: -18px;
     
 }
 .contenedor-header header ul{
@@ -277,7 +304,7 @@ html{
 }
 .sobremi .fila .col ul li span{
     font-size: 12px;
-    background-color: #a7b0bf;
+    background-color: #5fb93e;
     color: #121517;
     padding: 4px;
     font-weight: bold;
@@ -701,12 +728,6 @@ html{
     position: relative;
 }
 
-.contacto .col img:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: 0.6s ease;
-  }
 
 
 .contacto .col input, .contacto .col textarea{
@@ -716,16 +737,19 @@ html{
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #8cb0e2;
-    color: rgb(35, 13, 66);
+    background-color: rgb(50, 34, 71);
+    color: white;
     font-size: 15px;
 }
 
 ::placeholder{
-    color: rgb(93, 15, 15);
+    color: white;
 }
 
-
+.contactform{
+display: grid;
+place-items: center;
+}
 .contacto button{
     cursor: pointer;
     background-color: rgb(35, 13, 66) ;
@@ -758,7 +782,7 @@ html{
     border-radius: 10px;
 }
 .contacto .col img{
-    width: 70%; 
+    width: 80%; 
     border-radius: 25px;
 }
 
@@ -838,7 +862,7 @@ footer .arriba :hover{
     margin: auto;
 }
 .project h2{
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'gabriola';
     text-align: center;
     padding: 20px 0;
@@ -893,13 +917,12 @@ footer .arriba :hover{
   }
   
   .project-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1rem;
+ 
   }
   
   .project-description {
     font-size: 1em;
-    text-align: justify;
     margin-bottom: 15px;
   }
   
