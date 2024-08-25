@@ -40,7 +40,7 @@ function seleccionar() {
 
 
 function seleccionar(){
-    const nav = document.getElementById("nav");
+   const nav = document.getElementById("nav");
     const menuIcon = document.querySelector(".nav-responsive i");
 
     if (menuVisible) {

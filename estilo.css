@@ -76,6 +76,7 @@ html{
     left: 0;
     z-index: 1;
     padding: 15px 0px;
+    text-align: center;
 }
 .contenedor-header header{
     
@@ -87,12 +88,15 @@ html{
 
 
 }
-.contenedor-header header .logo img {
-    
-    position: absolute;
-    height: 60px;
-    width: 100px;
-    border-radius: 50%;
+.contenedor-header header .logo p {
+  color: #e6d964;
+  text-align: center;
+  font-family: 'segoe script';
+  margin: 15px 15px;
+  padding: 2px;
+  transition: .3s;
+  text-decoration: none;
+  font-size: 20px;
     
 }
 .contenedor-header header ul{
@@ -117,15 +121,16 @@ html{
 }
 .header-container {
     text-align: center;
+    margin-top: 20px;
   }
 
   .typewriter-text {
-    margin-top: 2px;
+    /* margin-top: 5px; */
     letter-spacing: 2px;
     font-size: 18px;
     font-weight: bold;
     color: white;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     height: 30px; /* Adjust to your needs */
   }
   .respon{
@@ -150,15 +155,18 @@ html{
     align-items: center;
 }
 .inicio .contenido-banner{
-    padding: 20px;
- 
-    /* background: linear-gradient(to top, rgba(73, 78, 80, 0.8), rgb(19, 20, 22)), */
-    /* background : url(img/back_profile.png); */
-    /* background-color: #173347; */
-    max-width: 500px;
+    padding: 30px;
+    /*background:;
+    linear-gradient(totop,rgba(73,78,80,0.8),rgb(19,20,22)),*//*background: url(img/back_profile.png);
+    *//*background-color: #173347;
+    */max-width: 500px;
     margin: auto;
     text-align: center;
-    border-radius: 23px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
 
 .inicio .contenido-banner img:hover {
@@ -912,13 +920,14 @@ footer .arriba :hover{
   @media screen and (max-width: 980px) {
     nav{
         display: none;
-  
+        transition: left 0.3s ease-in-out; /* Smooth transition */
     }
     .nav-responsive{
         display: block;
         position: relative;
         cursor: pointer;
-        
+        text-align: center;
+        transition: left 0.3s ease-in-out; /* Smooth transition */
     }
     nav.responsive {
         display: block;
