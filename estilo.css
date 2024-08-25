@@ -74,7 +74,8 @@ html{
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 1;
+    padding: 15px 0px;
 }
 .contenedor-header header{
     
@@ -82,7 +83,7 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 0px 20px;
 
 
 }
@@ -103,11 +104,12 @@ html{
     text-align: center;
     font-family: 'segoe script';
     color: #fff;
-    margin: 0 15px;
+    margin: 15px 15px;
     padding: 2px;
     transition: .3s;
     text-decoration: none;
     font-size: 17px;
+
   
 }
 .contenedor-header header nav ul li a:hover{
@@ -125,6 +127,9 @@ html{
     color: white;
     margin-bottom: 20px;
     height: 30px; /* Adjust to your needs */
+  }
+  .respon{
+    padding: 15px 0px;
   }
 .nav-responsive{
     background-color: rgb(84, 2, 183);
@@ -904,30 +909,47 @@ footer .arriba :hover{
     background-color: rgb(219, 219, 25);
   }
 
-/* SECCION RESPONSIVE */
-@media screen and (max-width:980px){
+  @media screen and (max-width: 980px) {
     nav{
         display: none;
+  
     }
     .nav-responsive{
         display: block;
+        position: relative;
+        cursor: pointer;
+        
     }
-    nav.responsive{
+    nav.responsive {
         display: block;
         position: absolute;
-        right: 0;
-        top: 75px;
+        left: 0; /* Start off-screen */
+        top: 0px;
         background-color: #5d18e6;
-        width: 180px;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        transition: left 0.3s ease-in-out; /* Smooth transition */
     }
+
     nav.responsive ul{
         display: block !important;
+        margin-top: 50px;
     }
     nav.responsive ul li{
         border-bottom: 1px solid #fff;
         padding: 10px 0;
+        margin-top: 10px;
+    }
+    .nav-responsive .close-btn {
+        display: none;
+    }
+    nav.responsive.show + .nav-responsive .close-btn {
+        display: block;
     }
 }
+
+
 @media screen and (max-width:700px){
     .sobremi .fila{
         display: block;

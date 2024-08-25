@@ -11,20 +11,49 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 let menuVisible = false;
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
+function mostrarOcultarMenu() {
+    const nav = document.getElementById("nav");
+    const menuIcon = document.querySelector(".nav-responsive i");
+
+    if (menuVisible) {
+        nav.classList.remove("responsive");
+        menuIcon.classList.remove("fa-times");
+        menuIcon.classList.add("fa-bars");
         menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
+    } else {
+        nav.classList.add("responsive");
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-times");
         menuVisible = true;
     }
 }
 
-function seleccionar(){
+function seleccionar() {
+    const nav = document.getElementById("nav");
+    const menuIcon = document.querySelector(".nav-responsive i");
     
-    document.getElementById("nav").classList = "";
+    nav.classList.remove("show");
+    menuIcon.classList.remove("fa-times");
+    menuIcon.classList.add("fa-bars");
     menuVisible = false;
+}
+
+
+function seleccionar(){
+    const nav = document.getElementById("nav");
+    const menuIcon = document.querySelector(".nav-responsive i");
+
+    if (menuVisible) {
+        nav.classList.remove("responsive");
+        menuIcon.classList.remove("fa-times");
+        menuIcon.classList.add("fa-bars");
+        menuVisible = false;
+    } else {
+        nav.classList.add("responsive");
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-times");
+        menuVisible = true;
+    }
 }
 
 function efectoHabilidades(){
