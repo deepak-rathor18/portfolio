@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Deepak Rathor</title>
+        <title>Deepak Rathor | Portfolio</title>
 
     <meta charset="utf-8" />
     <link rel="icon" href="./img//favicon.png" />
@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="estilo.css">
 
+
 </head>
 
 <body>
@@ -38,7 +39,7 @@
     <div class="contenedor-header">
         <header class="header">
             <div class="logo">
-                <p>Deepak&nbsp;Rathor</p>
+                <p>D&nbsp;R</p>
             </div>
             <nav id="nav">
                 <ul>
@@ -58,30 +59,26 @@
 
     <!-- SECCION INICIO -->
     <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <div class="tilt-container">
-                    <div class="tilt">
-                        <img src="img/resuu.jpg" alt="image" class="img-fluid">
+
+     <div class="home-section">
+            <div class="home-content">
+                <div class="text-section">
+                    <h1 class="heading">
+                        Hi There! <span class="wave">👋🏻</span>
+                    </h1>
+                    <h1 class="heading-name">
+                        I'M <strong class="main-name">DEEPAK RATHOR</strong>
+                    </h1>
+                    <div class="typeparent">
+                        <div class="typewriter-text" id="typewriter-text"></div>
                     </div>
                 </div>
-            </div>
-            <div class="header-container">
 
-
-                <div class="typewriter-text" id="typewriter-text"></div>
-            </div>
-
-            <div class="redes">
-                <a href="https://www.facebook.com/profile.php?id=100053611511434&mibextid=ZbWKwL" target="_blank"><i
-                        class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://twitter.com/DeepakR52107981?t=7noyMCk9GTWSa5itSFPm6w&s=08" target="_blank"><i
-                        class="fa-brands fa-twitter"></i></a>
-                <a href="https://instagram.com/mr_deepak__rathor?igshid=ZDdkNTZiNTM=" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/deepak-rathor18/" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/deepak-rathor18" target="_blank"><i class="fa-brands fa-github"></i> </a>
+                <div class="image-section">
+                  
+                            <img src="img/resuu.jpg" alt="image" class="home-image">
+                    
+                </div>
             </div>
         </div>
     </section>
@@ -407,15 +404,42 @@
             <p class="description">Here are a few projects I've worked on recently.</p>
             <div class="project-cards">
 
-                <!-- Project Card 1
+                <!-- Project Card 1 -->
                 <div class="project-card">
-                    <img src="./img//sparkup.png" alt="" class="project-image">
+                    <img src="./img/sparkup.png" alt="Admin Dashboard" class="project-image">
                     <h2 class="project-title">Admin Dashboard</h2>
                     <p class="project-description">
-                        The admin dashboard project allows full management of website content, including dynamic updates and role-based access control for various user permissions.....</p>
+                        The admin dashboard project allows full management of website content, including dynamic updates
+                        and role-based access control for various user permissions.....
+                    </p>
                     <a href="#" class="btn" target="_blank">GitHub</a>
                     <a href="https://sparkuptech.in/#/" class="btn" target="_blank">Demo</a>
-                </div> -->
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <img src="./img/studynotion.png" alt="Study Notion" class="project-image">
+                    <h2 class="project-title">Study Notion</h2>
+                    <p class="project-description">
+                        Developed the Study Notion e-learning platform using ReactJS, NodeJS, and MongoDB, enabling
+                        students to access courses and instructors to manage content and track performance, with
+                        enhanced UI using Tailwind CSS...
+                    </p>
+                    <a href="https://github.com/deepak-rathor18/studynotion" class="btn" target="_blank">GitHub</a>
+                    <a href="#" class="btn" target="_blank">Demo</a>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <img src="./img/cricklive.png" alt="Criclive" class="project-image">
+                    <h2 class="project-title">Criclive (Cricket Live Score Website)</h2>
+                    <p class="project-description">
+                        Created Criclive, a real-time cricket score website using ReactJS and API integration,
+                        delivering up-to-the-minute match updates and scores with efficient state management...
+                    </p>
+                    <a href="https://github.com/deepak-rathor18/liveScore" class="btn" target="_blank">GitHub</a>
+                    <a href="https://cricket-live-score-ten.vercel.app/" class="btn" target="_blank">Demo</a>
+                </div>
 
                 <!-- Add more project cards similarly -->
 
@@ -430,12 +454,14 @@
             <div class="fila contactform">
                 <!-- Formulario -->
                 <div class="col form-col">
-                    <form action="mailto:deepakrathor3221@gmail.com" method="post" enctype="text/plain" class="contactform">
+                    <form action="mailto:deepakrathor3221@gmail.com" method="post" enctype="text/plain"
+                        class="contactform">
                         <input id="name" type="text" placeholder="Enter your name" required>
                         <input id="email" type="email" placeholder="Enter your e-mail" required>
                         <input id="phone" type="tel" placeholder="Enter your phone number" required>
                         <input id="purpose_subject" type="text" placeholder="Enter your subject / purpose" required>
-                        <textarea name="message" id="message" cols="3" rows="5" placeholder="Text your message..." required></textarea>
+                        <textarea name="message" id="message" cols="3" rows="5" placeholder="Text your message..."
+                            required></textarea>
                         <button type="submit">
                             <i class="fa-solid fa-paper-plane"></i> SEND
                             <span class="overlay"></span>
@@ -449,7 +475,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <hr class="hr">
 
@@ -471,7 +497,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
