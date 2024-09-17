@@ -122,24 +122,77 @@ function type() {
 
 type();
 
-const tilt = document.querySelector('.tilt');
 
-tilt.addEventListener('mousemove', (e) => {
-    const width = tilt.offsetWidth;
-    const height = tilt.offsetHeight;
-    const centerX = tilt.offsetLeft + width/2;
-    const centerY = tilt.offsetTop + height/2;
-    const mouseX = e.clientX - centerX;
-    const mouseY = e.clientY - centerY;
-    
-    const rotateX = (15 * mouseY / height);
-    const rotateY = (-15 * mouseX / width);
-    
-    tilt.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+document.getElementById('contactForm').addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  // Reference to the submit button
+  const submitButton = document.querySelector('#contactForm button[type="submit"]');
+
+  // Change button text to show loading state
+  submitButton.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submitting...';
+  submitButton.disabled = true; // Disable the button to prevent multiple submissions
+
+  // Gather form data
+  const formData = {
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      subject: document.getElementById('purpose_subject').value.trim(),
+      message: document.getElementById('message').value.trim(),
+  };
+
+  // Basic client-side validation
+  if (!formData.name || !formData.email || !formData.message) {
+      alert('Please fill out all required fields (Name, Email, and Message).');
+      submitButton.innerHTML = '<i class="fa-solid fa-paper-plane"></i> SEND';
+      submitButton.disabled = false;
+      return;
+  }
+
+  console.log(formData);
+
+  try {
+      // Send form data to the API using fetch with a 10-second timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // Set a 10-second timeout for the request
+
+      const response = await fetch('https://portfolio-contact-api.vercel.app/api/contact', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+          signal: controller.signal, // Attach the signal to abort the request if needed
+      });
+
+      clearTimeout(timeoutId); // Clear the timeout if the request completes successfully
+
+      if (!response.ok) {
+          // Server-side error
+          const errorResponse = await response.json();
+          throw new Error(errorResponse.message || 'Failed to send message. Please try again.');
+      }
+
+      // Success: Message sent
+      alert('Message sent successfully!');
+      // Clear form fields after successful submission
+      document.getElementById('contactForm').reset();
+  } catch (error) {
+      // Different error handling based on the type of error
+      if (error.name === 'AbortError') {
+          alert('Request timeout. Please check your internet connection and try again.');
+      } else if (error.message === 'Failed to fetch') {
+          alert('Network error. Please check your internet connection and try again.');
+      } else {
+          alert(`Error: ${error.message}`);
+      }
+  } finally {
+      // Reset the button state after the API call finishes
+      submitButton.innerHTML = '<i class="fa-solid fa-paper-plane"></i> SEND';
+      submitButton.disabled = false;
+  }
 });
 
-tilt.addEventListener('mouseleave', () => {
-    tilt.style.transform = 'rotateX(0) rotateY(0)';
-});
 
   

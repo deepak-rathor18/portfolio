@@ -114,6 +114,7 @@ padding: 20px 20px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
     transition: transform 0.5s, box-shadow 0.5s;
+
 }
 
 .image-section:hover{
@@ -195,7 +196,9 @@ padding: 20px 20px;
 
 .home-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+
+    border-radius: 50%;
 }
 
 @media (max-width: 768px) {
