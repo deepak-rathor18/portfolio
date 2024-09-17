@@ -138,7 +138,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       name: document.getElementById('name').value.trim(),
       email: document.getElementById('email').value.trim(),
       phone: document.getElementById('phone').value.trim(),
-      subject: document.getElementById('purpose_subject').value.trim(),
+      purpose_subject: document.getElementById('purpose_subject').value.trim(),
       message: document.getElementById('message').value.trim(),
   };
 
